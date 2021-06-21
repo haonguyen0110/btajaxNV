@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <form class="container">
+          <div class="card">
+            <div class="card-header bg-dark text-white font-weight-bold text-center">Quản lý nhân viên</div>
+            <div class="card-body">
+               
+                <div class="form-group">
+                    <p>Mã nhân viên</p>
+                    <input name="maNhanVien" id="maNhanVien"  class="form-control" />
+                    <div id="checkMa"></div>
+                </div>
+                <div class="form-group">
+                    <p>Tên nhân viên</p>
+                    <input name="tenNhanVien" id="tenNhanVien"  class="form-control" />
+                    <div id="checkTen"></div>
+                </div>
+                <div class="form-group">
+                    <p>Chức vụ</p>
+                    <select class="form-control" id="heSoChucVu" name="heSoChucVu">
+                        <option value="1">Nhân viên</option>
+                         <option value="2">Quản lý</option>
+                         <option value="3">Giám đốc</option>
+                     </select>
+                  </div>
+                  <div class="form-group">
+                    <p>Lương cơ bản</p>
+                    <input name="luongCoBan" id="luongCB"  class="form-control" />
+                    <div id="checkLuong"></div>
+                  </div>
+                  <div class="form-group">
+                    <p>Số giờ làm trong tháng</p>
+                    <input name="soGioLamTrongThang" id="gioLam"  class="form-control" />
+                    <div id="checkGio"></div>
+                  </div>
+            </div>
+            <div class="card-footer  text-right">
+                <button type="submit" class="btn btn-outline-success" id="btnThemNV">Thêm nhân viên</button>
+            </div>
+          </div>
+     
+
+          <br>
+          
+      </form>
+
+      <div class="container">
+        <table class="table">
+            <thead class="bg-primary font-weight-bold text-light">
+                <tr>
+                    <td>Mã nhân viên</td>
+                    <td>Tên nhân viên</td>
+                    <td>Chức vụ</td>
+                    <td>Lương cơ bản</td>
+                    <td>Tổng lương</td>
+                    <td>Giờ làm/tháng</td>
+                    <td>Xếp loại nhân viên</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="tblNhanVien">
+
+            </tbody>
+        </table>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="./js/model/nhanVien.js"></script>
+    <script src="./js/validation.js"></script>
+      <script src="./js/indexAjax.js"></script>
+
+</body>
+</html>
